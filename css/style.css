@@ -19,6 +19,16 @@ body {
     z-index: -1;
 }
 
+.fas {
+    color: #b1b1b1;
+    font-size: 20px;
+    margin: 0 5px;
+}
+
+.user_info {
+    display: flex;
+    align-items: center;
+}
 /* container web app */
 .container {
     width: 80%;
@@ -31,7 +41,25 @@ body {
 aside {
     width: 30%;
     background-color: white;
+    border-right: 1px solid #d6d6d6;
 }
+
+aside .user {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+.avatar_pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+aside .user nav {
+    display: flex;
+    align-items: center;
+}
+
 
 /* chat attiva */
 .active_chat {
