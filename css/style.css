@@ -22,7 +22,7 @@ body {
 .fas {
     color: #b1b1b1;
     font-size: 20px;
-    margin: 0 5px;
+    margin: 0 10px;
 }
 
 .user_info {
@@ -78,12 +78,15 @@ aside {
 .active_chat {
     width: 70%;
     background-image: url(../img/chat_background.png);
+    display: flex;
+    flex-direction: column;
 }
 
 .active_chat .chat {
     display: flex;
     flex-direction: column;
     padding: 50px 100px;
+    flex-grow: 1;
 }
 
 /* messaggi */
@@ -104,3 +107,24 @@ aside {
 }
 
 /* input chat */
+.active_chat .chat_inputs {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f2eee9;
+    padding: 10px 0;
+}
+
+.active_chat .chat_inputs .new_msg {
+    flex-grow: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+}
+
+.active_chat .chat_inputs .far,
+.active_chat .chat_inputs .fas {
+    color: #6b7377;
+    margin: 0 20px;
+    font-size: 22px;
+}
