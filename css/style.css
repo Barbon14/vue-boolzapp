@@ -22,7 +22,6 @@ body {
 .fas {
     color: #b1b1b1;
     font-size: 20px;
-    margin: 0 10px;
 }
 
 .user_info {
@@ -50,6 +49,11 @@ aside .user nav,
 .active_chat .chat_header nav {
     display: flex;
     align-items: center;
+}
+
+aside .user nav a,
+.active_chat .chat_header nav a {
+    margin: 0 10px;
 }
 
 aside .chat_list li {
@@ -125,6 +129,9 @@ aside {
 .active_chat .chat_inputs .far,
 .active_chat .chat_inputs .fas {
     color: #6b7377;
-    margin: 0 20px;
     font-size: 22px;
+}
+
+.active_chat .chat_inputs a {
+    margin: 0 20px;
 }
