@@ -10,17 +10,17 @@ var app = new Vue({
                 messages: [
                     {
                         date: '10/01/2020 1 5:30:55',
-                        text: 'Hai p ortato a s passo i l c ane?',
+                        text: 'Hai portato a spasso il cane?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 1 5:50:00',
-                        text: 'Ricordati d i d argli d a m angiare',
+                        text: 'Ricordati di dargli da mangiare',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 1 6:15:22',
-                        text: 'Tutto f atto!',
+                        text: 'Tutto fatto!',
                         status: 'received'
                     }
                 ],
@@ -32,17 +32,17 @@ var app = new Vue({
                 messages: [
                     {
                         date: '20/03/2020 1 6:30:00',
-                        text: 'Ciao c ome s tai?',
+                        text: 'Ciao come stai?',
                         status: 'sent'
                     },
                     {
                         date: '20/03/2020 1 6:30:55',
-                        text: 'Bene g razie! S tasera c i v ediamo?',
+                        text: 'Bene grazie! Stasera ci vediamo?',
                         status: 'received'
                     },
                     {
                         date: '20/03/2020 1 6:35:00',
-                        text: 'Mi p iacerebbe m a d evo a ndare a f are l a s pesa.',
+                        text: 'Mi piacerebbe ma devo andare a fare la spesa.',
                         status: 'sent'
                     }
                 ],
@@ -54,17 +54,17 @@ var app = new Vue({
                 messages: [
                     {
                         date: '28/03/2020 1 0:10:40',
-                        text: 'La M arianna v a i n c ampagna',
+                        text: 'La Marianna va in campagna',
                         status: 'received'
                     },
                     {
                         date: '28/03/2020 1 0:20:10',
-                        text: 'Sicuro d i n on a ver s bagliato c hat?',
+                        text: 'Sicuro di non aver sbagliato chat?',
                         status: 'sent'
                     },
                     {
                         date: '28/03/2020 1 6:15:22',
-                        text: 'Ah s cusa!',
+                        text: 'Ah scusa!',
                         status: 'received'
                     }
                 ],
@@ -76,12 +76,12 @@ var app = new Vue({
                 messages: [
                     {
                         date: '10/01/2020 1 5:30:55',
-                        text: 'Lo s ai c he h a a perto u na n uova p izzeria?',
+                        text: 'Lo sai che ha aperto una nuova pizzeria?',
                         status: 'sent'
                     },
                     {
                         date: '10/01/2020 1 5:50:00',
-                        text: 'Si, m a p referirei a ndare a l c inema',
+                        text: 'Si, ma preferirei andare al cinema',
                         status: 'received'
                     }
                 ],

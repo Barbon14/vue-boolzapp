@@ -79,3 +79,28 @@ aside {
     width: 70%;
     background-image: url(../img/chat_background.png);
 }
+
+.active_chat .chat {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 100px;
+}
+
+/* messaggi */
+.active_chat .chat .msg {
+    border-radius: 5px;
+    width: 200px;
+    padding: 10px;
+    font-size: 15px;
+}
+
+.msg.sent {
+    background-color: #d8f9b7;
+    align-self: flex-end;
+}
+
+.msg.recived {
+    background-color: white;
+}
+
+/* input chat */
