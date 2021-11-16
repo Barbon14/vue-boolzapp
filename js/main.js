@@ -6,6 +6,11 @@ var app = new Vue({
         // chat attiva
         activeChat : 0,
 
+        user : {
+            name : 'Nome Utente',
+            avatar: 'img/avatar_io.jpg'
+        },
+
         // contatti e relativi messaggi
         contacts : [
             {
