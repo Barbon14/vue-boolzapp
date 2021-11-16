@@ -21,6 +21,11 @@ body {
     font-size: 10px; 
 }
 
+.last_message {
+    color: #b6b9bb;
+    font-size: 14px;
+}
+
 .scroll {
     overflow-y: auto;
     scrollbar-color: #aaaaaa transparent;

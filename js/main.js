@@ -105,10 +105,16 @@ var app = new Vue({
             let last = '';
             for (let i = 0; i < array.length; i++) {
                 if (array[i].status === 'received') {
-                   last = array[i].date
+                   last = array[i].date;
                } 
             }
             return last;
         },
+
+        // ultimo messaggio della chat
+        lastMessage(array) {
+            let last = array[array.length - 1].text;
+            return last
+        }
     },
 });

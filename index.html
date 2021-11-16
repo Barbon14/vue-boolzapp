@@ -74,9 +74,14 @@
                         @click="setActiveChat(i)"
                         :class="i === activeChat ? 'active' : null ">
                             <img class="avatar_pic" :src="contact.avatar" :alt="contact.name">
-                            <h4>
-                                {{contact.name}}
-                            </h4>
+                            <div>
+                                <h4>
+                                    {{ contact.name }}
+                                </h4>
+                                <div class="last_message">
+                                    {{ lastMessage(contact.messages) }}
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
@@ -90,14 +95,14 @@
                         <img class="avatar_pic" 
                         :src="contacts[activeChat].avatar" 
                         :alt="contacts[activeChat].name">
-                        <span>
+                        <div>
                             <h4 class="name">
                                 {{ contacts[activeChat].name }}
                             </h4>
                             <div class="time_info">
                                 Ultimo accesso {{ lastAccess(contacts[activeChat].messages) }}
                             </div>
-                        </span>
+                        </div>
                     </div>
 
                     <!-- icone navigazione chat attiva -->
