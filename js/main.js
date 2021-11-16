@@ -2,8 +2,11 @@
 var app = new Vue({
     el: "#app",
     data: { 
-
+        
+        // chat attiva
         activeChat : 0,
+
+        // contatti e relativi messaggi
         contacts : [
             {
                 name : 'Michele',
@@ -91,8 +94,21 @@ var app = new Vue({
         ],
     },
     methods : {
+
+        // chat attiva
         setActiveChat(index) {
             this.activeChat = index;
-        }
+        },
+
+        // ultimo accesso interlocutore preso dal suo ultimo messaggio inviato
+        lastAccess(array) {
+            let last = '';
+            for (let i = 0; i < array.length; i++) {
+                if (array[i].status === 'received') {
+                   last = array[i].date
+               } 
+            }
+            return last;
+        },
     },
 });

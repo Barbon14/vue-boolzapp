@@ -57,6 +57,12 @@ aside .user .user_info,
     align-items: center;
 }
 
+.active_chat .chat_header .chat_info .time_info {
+    font-size: 12px;
+    color: #6b7377;
+    font-weight: bold;
+}
+
 aside .user nav a,
 .active_chat .chat_header nav a {
     margin: 0 10px;

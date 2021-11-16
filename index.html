@@ -73,7 +73,6 @@
                             <h4>
                                 {{contact.name}}
                             </h4>
-
                         </li>
                     </ul>
                 </div>
@@ -87,9 +86,14 @@
                         <img class="avatar_pic" 
                         :src="contacts[activeChat].avatar" 
                         :alt="contacts[activeChat].name">
-                        <h4 class="name">
-                            {{ contacts[activeChat].name }}
-                        </h4>
+                        <span>
+                            <h4 class="name">
+                                {{ contacts[activeChat].name }}
+                            </h4>
+                            <div class="time_info">
+                                Ultimo accesso {{ lastAccess(contacts[activeChat].messages) }}
+                            </div>
+                        </span>
                     </div>
 
                     <!-- icone navigazione chat attiva -->
