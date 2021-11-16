@@ -54,8 +54,13 @@
 
                 <!-- lista chat -->
                 <ul class="chat_list">
-                    <li v-for="contact, i in contacts" :key="i">
-                        <img class="avatar_pic" :src="contact.avatar" :alt="contact.name">
+                    <li 
+                    v-for="contact, i in contacts" 
+                    :key="i" 
+                    @click="setActiveChat(i)">
+                        <img class="avatar_pic" 
+                        :src="contact.avatar" 
+                        :alt="contact.name">
                         <h4>
                             {{contact.name}}
                         </h4>
@@ -68,9 +73,11 @@
 
                 <div class="chat_header">
                     <div class="user_info">
-                        <img class="avatar_pic" src="img/avatar_io.jpg" alt="">
+                        <img class="avatar_pic" 
+                        :src="contacts[activeChat].avatar" 
+                        :alt="contacts[activeChat].name">
                         <h4 class="name">
-                            Nome Utente
+                            {{ contacts[activeChat].name }}
                         </h4>
                     </div>
 
@@ -93,7 +100,7 @@
                     
                     <div class="msg" 
                     :class="msg.status === 'sent' ? 'sent' : null" 
-                    v-for="msg, i in contacts[0].messages" 
+                    v-for="msg, i in contacts[activeChat].messages" 
                     :key="i">
                         {{ msg.text }}
                     </div>
