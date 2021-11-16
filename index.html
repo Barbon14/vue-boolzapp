@@ -28,6 +28,7 @@
                             Nome Utente
                         </h4>
                     </div>
+                    
 
                     <!-- icone navigazione utente -->
                     <nav>
@@ -45,7 +46,7 @@
                 
                 <!-- barra di ricerca chat -->
                 <div class="search">
-
+                    <input type="search">
                 </div>
 
                 <!-- lista chat -->
@@ -69,7 +70,7 @@
                             Nome Utente
                         </h4>
                     </div>
-                    
+
                     <!-- icone navigazione chat attiva -->
                     <nav class="nav_chat">
                         <a href="#">
@@ -86,9 +87,13 @@
 
                 <!-- messaggi -->
                 <div class="chat">
-                    <div class="msg sent">prova</div>
-                    <div class="msg recived">prova</div>
-                    <div class="msg sent">prova</div>
+                    
+                    <div class="msg" 
+                    :class="msg.status === 'sent' ? 'sent' : null" 
+                    v-for="msg, i in contacts[0].messages" 
+                    :key="i">
+                        {{ msg.text }}
+                    </div>
                 </div>
                 
                 <!-- input chat -->
@@ -108,7 +113,7 @@
     <!-- Vue.js -->
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <!-- dataTime library -->
-    <script src="path/to/dayjs/dayjs.min.js"></script>
+    <script src="https://unpkg.com/dayjs@1.8.21/dayjs.min.js"></script>
     <!-- my Js -->
     <script type="text/javascript" src="js/main.js"></script>
 </body>

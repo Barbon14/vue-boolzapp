@@ -99,16 +99,18 @@ aside {
     width: 200px;
     padding: 10px;
     font-size: 15px;
+    background-color: white;
+    margin-bottom: 10px;
 }
 
-.msg.sent {
+.active_chat .chat .msg.sent {
     background-color: #d8f9b7;
     align-self: flex-end;
 }
 
-.msg.recived {
+/* .msg.recived {
     background-color: white;
-}
+} */
 
 /* input chat */
 .active_chat .chat_inputs {
