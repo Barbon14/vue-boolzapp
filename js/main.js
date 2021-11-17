@@ -6,12 +6,16 @@ var app = new Vue({
         // chat attiva
         activeChat : 0,
 
+        // info utente
         user : {
             name : 'Nome Utente',
             avatar: 'img/avatar_io.jpg'
         },
-
+        
+        // testo nuovo messaggio
         newMsgText : '',
+
+        searchContact: '',
 
         // contatti e relativi messaggi
         contacts : [
@@ -100,6 +104,7 @@ var app = new Vue({
             },
         ],
     },
+
     methods : {
 
         // chat attiva
@@ -156,5 +161,12 @@ var app = new Vue({
                 chat.push(newMsg);
             }, 1000);
         },
+
+        // trova contatti 
+        findContact(array, input) {
+            let state = array.toLowerCase().includes(input);
+            console.log(state);
+            return state
+        }
     },
 });
