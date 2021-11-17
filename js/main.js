@@ -141,6 +141,20 @@ var app = new Vue({
             console.log(newMsg);
             chat.push(newMsg);
             this.newMsgText = '';
-        }
+            this.msgReply(chat);
+        },
+
+        // risposta automatica
+        msgReply(chat) {
+            setTimeout(() => {
+                const newMsg = {
+                    date: this.nowDateTime(),
+                    text: 'Ok',
+                    status: 'received'
+                };
+                console.log(newMsg);
+                chat.push(newMsg);
+            }, 1000);
+        },
     },
 });
