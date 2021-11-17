@@ -11,6 +11,8 @@ var app = new Vue({
             avatar: 'img/avatar_io.jpg'
         },
 
+        newMsgText : '',
+
         // contatti e relativi messaggi
         contacts : [
             {
@@ -119,7 +121,26 @@ var app = new Vue({
         // ultimo messaggio della chat
         lastMessage(array) {
             let last = array[array.length - 1].text;
-            return last
+            return last;
+        },
+
+        // data e ora 
+        nowDateTime() {
+            const now = `${dayjs().date()}/${dayjs().month()}/${dayjs().year()} ${dayjs().hour()}:${dayjs().minute()}:${dayjs().second()}`;
+            console.log(now);
+            return now;
+        },
+
+        // nuovo messaggio
+        newMsg(chat) {
+            const newMsg = {
+                date: this.nowDateTime(),
+                text: this.newMsgText,
+                status: 'sent'
+            };
+            console.log(newMsg);
+            chat.push(newMsg);
+            this.newMsgText = '';
         }
     },
 });

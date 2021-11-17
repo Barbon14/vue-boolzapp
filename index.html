@@ -138,7 +138,11 @@
                     <a href="#">
                         <i class="far fa-smile"></i>
                     </a>
-                    <input class="new_msg" type="text" placeholder="Scrivi un messaggio">
+                    <input 
+                    class="new_msg" type="text" 
+                    placeholder="Scrivi un messaggio"
+                    v-model="newMsgText"
+                    @keyup.enter="newMsg(contacts[activeChat].messages)">
                     <a href="#">
                         <i class="fas fa-microphone"></i>
                     </a>
