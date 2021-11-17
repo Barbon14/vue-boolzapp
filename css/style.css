@@ -166,7 +166,7 @@ aside .chat_list li.active {
 .active_chat .chat {
     display: flex;
     flex-direction: column;
-    padding: 50px 100px;
+    padding: 8%;
     flex-grow: 1;
 }
 
