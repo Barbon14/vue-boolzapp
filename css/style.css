@@ -173,7 +173,6 @@ aside .chat_list li.active {
 /* messaggi */
 .active_chat .chat .msg {
     border-radius: 10px;
-    width: 250px;
     padding: 10px;
     padding-bottom: 18px;
     font-size: 15px;
@@ -182,6 +181,10 @@ aside .chat_list li.active {
     font-weight: bold;
     font-size: 14px;
     position: relative;
+    align-self: flex-start;
+    min-width: 120px;
+    max-width: 320px;
+    word-break: break-word;
 }
 
 .active_chat .chat .msg.sent {
