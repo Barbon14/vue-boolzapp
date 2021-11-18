@@ -16,13 +16,13 @@ body {
     );
 }
 
-.time_info {
+.time_info,
+.last_message {
     color: #b6b9bb;
     font-size: 10px; 
 }
 
 .last_message {
-    color: #b6b9bb;
     font-size: 14px;
 }
 
@@ -159,15 +159,17 @@ aside .chat_list li.active {
 .active_chat {
     width: 70%;
     background-image: url(../img/chat_background.png);
-    display: flex;
-    flex-direction: column;
 }
 
 .active_chat .chat {
-    display: flex;
-    flex-direction: column;
     padding: 8%;
     flex-grow: 1;
+}
+
+.active_chat,
+.active_chat .chat {
+    display: flex;
+    flex-direction: column;
 }
 
 /* messaggi */
@@ -190,13 +192,12 @@ aside .chat_list li.active {
 
 .active_chat .chat .msg.sent {
     background-color: #d8f9b7;
-    align-self: flex-end;
 }
 
+.active_chat .chat .msg.sent,
 .active_chat .chat .msg .time_info {
     align-self: flex-end;
 }
-
 
 /* input chat */
 .active_chat .chat_inputs {

@@ -132,7 +132,7 @@ var app = new Vue({
 
         // nuovo messaggio
         newMsg(chat) {
-            if (this.newMsg !== '') {
+            if (this.newMsgText !== '') {
                 const newMsg = {
                     date: this.nowDateTime(),
                     text: this.newMsgText,
