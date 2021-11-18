@@ -174,17 +174,18 @@ aside .chat_list li.active {
 .active_chat .chat .msg {
     border-radius: 10px;
     padding: 10px;
-    padding-bottom: 18px;
-    font-size: 15px;
+    padding-bottom: 6px;
     background-color: white;
     margin-bottom: 8px;
     font-weight: bold;
     font-size: 14px;
-    position: relative;
-    align-self: flex-start;
     min-width: 120px;
     max-width: 320px;
     word-break: break-word;
+    /* flex */
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
 }
 
 .active_chat .chat .msg.sent {
@@ -193,9 +194,7 @@ aside .chat_list li.active {
 }
 
 .active_chat .chat .msg .time_info {
-    position: absolute;
-    bottom: 4px;
-    right: 4px;
+    align-self: flex-end;
 }
 
 

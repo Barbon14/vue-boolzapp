@@ -15,6 +15,7 @@ var app = new Vue({
         // testo nuovo messaggio
         newMsgText : '',
 
+        // ricerca contatti
         searchContact: '',
 
         // contatti e relativi messaggi
@@ -124,29 +125,24 @@ var app = new Vue({
         },
 
         // ultimo messaggio della chat
-        lastMessage(array) {
-            let last = array[array.length - 1].text;
-            return last;
-        },
+        lastMessage : (array) => array[array.length - 1].text,
 
         // data e ora 
-        nowDateTime() {
-            const now = `${dayjs().date()}/${dayjs().month()}/${dayjs().year()} ${dayjs().hour()}:${dayjs().minute()}:${dayjs().second()}`;
-            console.log(now);
-            return now;
-        },
+        nowDateTime: () => dayjs().format('DD/MM/YYYY HH:mm:ss'),
 
         // nuovo messaggio
         newMsg(chat) {
-            const newMsg = {
-                date: this.nowDateTime(),
-                text: this.newMsgText,
-                status: 'sent'
-            };
-            console.log(newMsg);
-            chat.push(newMsg);
-            this.newMsgText = '';
-            this.msgReply(chat);
+            if (this.newMsg !== '') {
+                const newMsg = {
+                    date: this.nowDateTime(),
+                    text: this.newMsgText,
+                    status: 'sent'
+                };
+                console.log(newMsg);
+                chat.push(newMsg);
+                this.newMsgText = '';
+                this.msgReply(chat);
+            } 
         },
 
         // risposta automatica
@@ -163,10 +159,6 @@ var app = new Vue({
         },
 
         // trova contatti 
-        findContact(array, input) {
-            let state = array.toLowerCase().includes(input);
-            console.log(state);
-            return state
-        }
+        findContact : (array, input) => array.toLowerCase().includes(input),
     },
 });
