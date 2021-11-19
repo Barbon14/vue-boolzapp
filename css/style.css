@@ -197,6 +197,8 @@ aside .chat_list li .time_info {
     align-self: flex-start;
     display: flex;
     flex-direction: column;
+    /* position */
+    position: relative;
 }
 
 .active_chat .chat .msg.sent {
@@ -206,6 +208,48 @@ aside .chat_list li .time_info {
 .active_chat .chat .msg.sent,
 .active_chat .chat .msg .time_info {
     align-self: flex-end;
+}
+
+/* dropdown menu messaggi */
+.active_chat .chat .msg .fas {
+    position: absolute;
+    top: 1px;
+    right: 8px;
+    font-size: 12px;
+    display: none;
+    cursor: pointer;
+}
+
+.active_chat .chat .msg:hover .fas {
+    display: block;
+} 
+
+/* contenuto dropdown */
+.active_chat .chat .msg .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  top: 13px;
+  right: 5px;
+}
+
+.active_chat .chat .msg .dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.active_chat .chat .msg .dropdown a:hover {
+    background-color: #ddd;
+}
+
+.active_chat .chat .msg .dropdown-content.show {
+    display: block;
 }
 
 /* input chat */

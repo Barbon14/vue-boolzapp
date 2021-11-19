@@ -129,7 +129,6 @@ var app = new Vue({
 
         // data e ora ultimo messaggio
         lastMsgTime: (array) => array[array.length - 1].date,
-        
         // data e ora 
         nowDateTime: () => dayjs().format('DD/MM/YYYY HH:mm:ss'),
 
@@ -163,5 +162,9 @@ var app = new Vue({
 
         // trova contatti 
         findContact : (array, input) => array.toLowerCase().includes(input),
+
+        // attivazione dropdown menu messaggi
+        dropmenuActive: (index) => document.getElementsByClassName("dropdown-content")[index].classList.toggle("show"),
+        
     },
 });

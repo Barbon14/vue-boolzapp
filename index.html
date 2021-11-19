@@ -24,10 +24,14 @@
                 <!-- utente -->
                 <div class="user">
                     <div class="user_info">
+
+                        <!-- immmagine utente -->
                         <img class="avatar_pic" 
                             :src="user.avatar" 
                             :alt="user.name"
                         >
+
+                        <!-- nome utente -->
                         <h4>
                             {{ user.name }}
                         </h4>
@@ -84,18 +88,26 @@
                             :class="i === activeChat ? 'active' : null "
                             v-if="findContact(contact.name, searchContact)"
                         >
+
+                            <!-- immagine contatto -->
                             <img class="avatar_pic" 
                                 :src="contact.avatar" 
                                 :alt="contact.name"
                             >
                             <div class="contact_text">
+
+                                <!-- nome contatto -->
                                 <h4>
                                     {{ contact.name }}
                                 </h4>
+
+                                <!-- ultimo messaggio della chat -->
                                 <div class="last_message">
                                     {{ lastMessage(contact.messages) }}
                                 </div>
                             </div>
+
+                            <!-- data e ora ultimo messaggio della chat -->
                             <div class="time_info">
                                 {{ lastMsgTime(contact.messages) }}
                             </div>
@@ -106,18 +118,25 @@
             
             <!-- sezione chat attiva -->
             <section class="active_chat">
-
+                
+                <!-- parte superiore chat attiva, simile a utente e contatto -->
                 <div class="chat_header">
                     <div class="chat_info">
+
+                        <!-- immagine contatto -->
                         <img 
                             class="avatar_pic" 
                             :src="contacts[activeChat].avatar" 
                             :alt="contacts[activeChat].name"
                         >
                         <div>
+
+                            <!-- nome contatto -->
                             <h4 class="name">
                                 {{ contacts[activeChat].name }}
                             </h4>
+
+                            <!-- ultimo accesso contatto, uso data e ora ultimo messaggio inciato dal contatto -->
                             <div class="time_info">
                                 Ultimo accesso {{ lastAccess(contacts[activeChat].messages) }}
                             </div>
@@ -147,10 +166,25 @@
                         v-for="msg, i in contacts[activeChat].messages" 
                         :key="i"
                     >
+
+                        <!-- testo messaggio -->
                         {{ msg.text }}
-                        <span class="time_info">
+
+                        <!-- data e ora messaggio -->
+                        <div class="time_info">
                             {{ msg.date }}
-                        </span>
+                        </div>
+
+                        <!-- dropmenu messaggi -->
+                        <i class="fas fa-chevron-down" @click="dropmenuActive(i)"></i>
+                        <div class="dropdown-content">
+                            <a href="#">
+                                Info
+                            </a>
+                            <a href="#">
+                                Emlimina messaggio
+                            </a>
+                        </div>
                     </div>
                 </div>
                 
@@ -159,6 +193,8 @@
                     <a href="#">
                         <i class="far fa-smile"></i>
                     </a>
+
+                    <!-- inserimento nuovo messaggio al rilascio di enter -->
                     <input 
                         class="new_msg" type="text" 
                         placeholder="Scrivi un messaggio"
