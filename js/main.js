@@ -125,10 +125,26 @@ var app = new Vue({
         },
 
         // ultimo messaggio della chat
-        lastMsgText : (array) => array[array.length - 1].text,
+        lastMsgText : (array) => {
+            let index = array.length - 1;
+            let msg = '';
+            if (index >= 0) {
+                msg = array[index].text;
+            } else {
+                msg = 'Non sono presenti messaggi in questa chat'
+            }
+            return msg;
+        },
 
         // data e ora ultimo messaggio
-        lastMsgTime : (array) => array[array.length - 1].date,
+        lastMsgTime: (array) => {
+            let index = array.length - 1;
+            let info = '';
+            if (index >= 0) {
+                info = array[index].date;
+            }
+            return info;
+        },
 
         // data e ora 
         nowDateTime : () => dayjs().format('DD/MM/YYYY HH:mm:ss'),
