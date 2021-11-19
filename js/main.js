@@ -127,6 +127,9 @@ var app = new Vue({
         // ultimo messaggio della chat
         lastMessage : (array) => array[array.length - 1].text,
 
+        // data e ora ultimo messaggio
+        lastMsgTime: (array) => array[array.length - 1].date,
+        
         // data e ora 
         nowDateTime: () => dayjs().format('DD/MM/YYYY HH:mm:ss'),
 

@@ -88,13 +88,16 @@
                                 :src="contact.avatar" 
                                 :alt="contact.name"
                             >
-                            <div>
+                            <div class="contact_text">
                                 <h4>
                                     {{ contact.name }}
                                 </h4>
                                 <div class="last_message">
                                     {{ lastMessage(contact.messages) }}
                                 </div>
+                            </div>
+                            <div class="time_info">
+                                {{ lastMsgTime(contact.messages) }}
                             </div>
                         </li>
                     </ul>
