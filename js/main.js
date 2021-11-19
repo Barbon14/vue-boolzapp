@@ -125,12 +125,13 @@ var app = new Vue({
         },
 
         // ultimo messaggio della chat
-        lastMessage : (array) => array[array.length - 1].text,
+        lastMsgText : (array) => array[array.length - 1].text,
 
         // data e ora ultimo messaggio
-        lastMsgTime: (array) => array[array.length - 1].date,
+        lastMsgTime : (array) => array[array.length - 1].date,
+
         // data e ora 
-        nowDateTime: () => dayjs().format('DD/MM/YYYY HH:mm:ss'),
+        nowDateTime : () => dayjs().format('DD/MM/YYYY HH:mm:ss'),
 
         // nuovo messaggio
         newMsg(chat) {
@@ -164,7 +165,9 @@ var app = new Vue({
         findContact : (array, input) => array.toLowerCase().includes(input),
 
         // attivazione dropdown menu messaggi
-        dropmenuActive: (index) => document.getElementsByClassName("dropdown-content")[index].classList.toggle("show"),
+        dropmenuToggle : (index) => document.getElementsByClassName("dropdown-content")[index].classList.toggle("show"),
         
+        // elimina messaggio
+        deleteMsg : (array, index) => array.splice(index, 1),
     },
 });

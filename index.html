@@ -103,7 +103,7 @@
 
                                 <!-- ultimo messaggio della chat -->
                                 <div class="last_message">
-                                    {{ lastMessage(contact.messages) }}
+                                    {{ lastMsgText(contact.messages) }}
                                 </div>
                             </div>
 
@@ -176,12 +176,12 @@
                         </div>
 
                         <!-- dropmenu messaggi -->
-                        <i class="fas fa-chevron-down" @click="dropmenuActive(i)"></i>
+                        <i class="fas fa-chevron-down" @click="dropmenuToggle(i)"></i>
                         <div class="dropdown-content">
                             <a href="#">
                                 Info
                             </a>
-                            <a href="#">
+                            <a href="#" @click="deleteMsg(contacts[activeChat].messages, i), dropmenuToggle(i)">
                                 Emlimina messaggio
                             </a>
                         </div>
